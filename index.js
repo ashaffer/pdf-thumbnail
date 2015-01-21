@@ -1,6 +1,6 @@
 var gm = require('gm');
 
-module.exports = function(source, opts) {
-  return gm(source)
-    .stream('png');
+module.exports = function(source, opts, cb) {
+  gm(source)
+    .toBuffer('png', cb);
 };
