@@ -1,7 +1,6 @@
 var gm = require('gm');
 
-module.exports = function(opts) {
-  return gm(this)
-    .setFormat('png')
-    .stream();
+module.exports = function(source, opts) {
+  return gm(source)
+    .stream('png');
 };
